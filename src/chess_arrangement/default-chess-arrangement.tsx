@@ -1,0 +1,37 @@
+import {Bishop, King, Knight, Pawn, Piece, Queen, Rook} from '../game/pieces'
+
+export const defaultChessArrangement: Array<Piece> = [
+    new Pawn('white', 'A2',  'Pawn'),
+    new Pawn('white', 'B2', 'Pawn'),
+    new Pawn('white', 'C2', 'Pawn'),
+    new Pawn('white', 'D2', 'Pawn'),
+    new Pawn('white', 'E2', 'Pawn'),
+    new Pawn('white', 'F2', 'Pawn'),
+    new Pawn('white', 'G2', 'Pawn'),
+    new Pawn('white', 'H2', 'Pawn'),
+    new Pawn('black', 'A7', 'Pawn'),
+    new Pawn('black', 'B7', 'Pawn'),
+    new Pawn('black', 'C7', 'Pawn'),
+    new Pawn('black', 'D7', 'Pawn'),
+    new Pawn('black', 'E7', 'Pawn'),
+    new Pawn('black', 'F7', 'Pawn'),
+    new Pawn('black', 'G7', 'Pawn'),
+    new Pawn('black', 'H7', 'Pawn'),
+    new Rook('white', 'A1', 'Rook'),
+    new Rook('white', 'H1', 'Rook'),
+    new Rook('black', 'A8', 'Rook'),
+    new Rook('black', 'H8', 'Rook'),
+    new Knight('white', 'B1',  'Knight'),
+    new Knight('white', 'G1',  'Knight'),
+    new Knight('black', 'G8',  'Knight'),
+    new Knight('black', 'B8',  'Knight'),
+    new Bishop('white', 'C1',  'Bishop'),
+    new Bishop('white', 'F1',  'Bishop'),
+    new Bishop('black', 'C8',  'Bishop'),
+    new Bishop('black', 'F8',  'Bishop'),
+    new King('black', 'E8', 'King'),
+    new King('white', 'E1', 'King'),
+    new Queen('white', 'D1', 'Queen'),
+    new Queen('black', 'D8', 'Queen')
+]
+

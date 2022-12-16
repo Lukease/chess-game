@@ -1,0 +1,298 @@
+#root
+  width: 100vw
+  height: 100vh
+  background-color: black
+  -moz-user-select: none
+  -webkit-user-select: none
+
+.content
+  display: flex
+  width: 100%
+  height: 100%
+  align-items: center
+  justify-content: center
+  gap: 10px
+  flex-direction: column
+  background-image: linear-gradient(#413f3f, black)
+
+  &__trash
+    background-image: url('icons/garbage-trash-svgrepo-com.svg')
+    width: 90px
+    height: 60px
+    background-size: 70% 70%
+    background-position: center
+    background-repeat: no-repeat
+
+.field
+  display: flex
+  width: 90px
+  height: 90px
+  justify-content: center
+  align-items: center
+
+  &__black
+    background-color: chocolate
+
+  &__white
+    background-color: burlywood
+
+  &__chosen
+    background-color: greenyellow
+
+  &__e-p
+    background-color: green
+
+  &__check
+    background-color: red
+    z-index: 3
+
+  &__column
+    display: flex
+    height: 600px
+    flex-direction: column
+
+.game
+  display: flex
+  width: 720px
+  height: 600px
+
+  &__arena
+    position: relative
+    width: 720px
+    height: 800px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 10px
+    z-index: 1
+
+  &__navigation
+    display: flex
+    position: absolute
+    width: 10%
+    height: auto
+    align-items: center
+    top: 10px
+    right: 1%
+    flex-direction: column
+    background-color: #343232
+    border-radius: 20px
+
+.panel
+  display: flex
+  width: 715px
+  height: 60px
+
+  &__add
+    display: flex
+    width: 75%
+    align-items: center
+    justify-content: space-between
+    background-color: #5d5656
+    border-radius: 20px
+
+.figure
+  display: flex
+  height: 70px
+  width: 70px
+  z-index: 2
+
+  &__add
+    height: 16%
+
+  &__move-empty
+    width: 40%
+    height: 40%
+    border-radius: 50%
+    background: #66d97f center
+
+  &__move-figure
+    height: 90%
+    border-radius: 50%
+    border-style: solid
+    border-color: #66d97f
+
+  &__add
+    width: 100%
+    height: 18%
+    display: flex
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+  &__move
+    width: 4%
+    height: 8%
+    display: flex
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+.history
+  position: absolute
+  display: flex
+  flex-direction: column
+  top: 1%
+  left: 1%
+  min-width: 5%
+  min-height: 8%
+  background-color: #343232
+  border-radius: 20px
+  text-align: center
+
+  &__nav
+    display: flex
+    padding: 8px
+    flex-direction: column
+    overflow-y: auto
+    overflow-x: hidden
+    max-height: 80vh
+
+  &__number
+    display: flex
+    height: auto
+    text-align: center
+    flex-direction: column
+    align-items: center
+    padding: 6px 14px
+    border-radius: 6px
+    border: none
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.1), inset 0 0.5px 0.5px rgba(255, 255, 255, 0.5), 0 0 0 0.5px rgba(0, 0, 0, 0.12)
+    color: #DFDEDF
+
+  &__container
+    display: flex
+    width: 100%
+    height: 20px
+    padding: 3px
+
+  &__button
+    display: none
+    height: auto
+    width: 40%
+    text-align: center
+
+.refresher
+  position: fixed
+  width: 50px
+  height: 50px
+  border-radius: 40px
+  background-image: url('icons/refresh1.webp')
+  background-size: contain
+  background-color: #343232
+  background-position: center
+  background-repeat: no-repeat
+  right: 20px
+  bottom: 10px
+
+.select
+  width: 100vw
+  height: 100vh
+  position: absolute
+  background-color: rgba(0,0,0,0.2)
+  border-radius: 6px
+  opacity: 0.4
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__promotion
+    position: absolute
+    display: flex
+    flex-direction: row
+    top: 10px
+    right: 0
+    width: 360px
+
+  &__player
+    position: absolute
+    display: flex
+    right: 20px
+    top: 45%
+    width: 50px
+    background-color: #343232
+    border-radius: 20px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 5px
+
+  &__new-figure
+    min-width: 10%
+    height: auto
+    padding: 5px
+    text-align: center
+    border-radius: 10%
+    border-style: solid
+    font-size: 220%
+    background: #343232 no-repeat center
+    opacity: 4
+    color: rgba(255, 255, 255, 1)
+
+
+.select__new-figure:hover
+  background-color: aqua
+
+.field:has(.figure__move-empty):hover
+  background-color:  #66d97f
+  opacity: 0.9
+
+.field:has(.figure__move-figure):hover
+  background-color:  #66d97f
+  opacity: 0.9
+
+.history__button:hover
+  background-color: aqua
+
+.history:hover
+  width: 15%
+
+.history:hover .history__button
+  display: block
+
+.history:hover .history__number
+  width: 20%
+
+.panel > .figure:hover
+  background-color: aqua
+
+button
+  margin: 5px
+
+div
+  color: #7a746b
+
+.select__player > img:hover
+  background-color: aqua
+
+.select__promotion > div:hover
+  background-image: linear-gradient(#c7783f, red)
+  border-radius: 40px
+
+@media only screen and (max-width: 877px)
+  .game
+    width: 100%
+
+  .game__arena
+    width: 400px
+    height: 540px
+
+  .game__add-figure
+    width: 100%
+
+  .field
+    width: 50px
+    height: 50px
+
+  .figure
+    height: 50px
+    width: 50px
+
+  .field__column
+    height: 400px
+
+  .panel
+    width: 100%
+
+

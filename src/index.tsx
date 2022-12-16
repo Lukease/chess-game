@@ -1,19 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import reportWebVitals from './reportWebVitals'
+import Arena from './UI/Arena'
+import {GameService, MovingService} from './game/suppliers'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
-);
+)
+const gameService = new GameService()
+const movingService = new MovingService()
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <Arena
+    gameService={gameService}
+    movingService={movingService}
+    />
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()

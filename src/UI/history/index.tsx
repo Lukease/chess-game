@@ -1,0 +1,1 @@
+export { HistoryOfMoves } from './history-of-moves'
